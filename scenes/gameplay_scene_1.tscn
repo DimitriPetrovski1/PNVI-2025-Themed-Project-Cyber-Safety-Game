@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5ktasytww183"]
+
+[ext_resource type="Texture2D" uid="uid://d0aig61ou6ba2" path="res://assets/Desk with lamp (1).png" id="1_ma2vo"]
+
+[node name="GameplayScene1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.38724923, 0.39594385, 0.80685467, 1)
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -356.0
+offset_right = 462.0
+grow_vertical = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="PanelContainer"]
+position = Vector2(230.5, 123.99997)
+scale = Vector2(7.6833334, 7.7333336)
+texture = ExtResource("1_ma2vo")
