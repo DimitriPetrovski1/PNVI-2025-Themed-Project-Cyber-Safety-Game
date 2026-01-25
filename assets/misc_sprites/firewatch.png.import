@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dupd5bqpmbvfr"
-path="res://.godot/imported/firewatch.png-d00026d3f07f554ede7761734cd1e72e.ctex"
+path="res://.godot/imported/firewatch.png-d8e5930dd6a77a9fc08e3fb8840e4de7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/firewatch.png"
-dest_files=["res://.godot/imported/firewatch.png-d00026d3f07f554ede7761734cd1e72e.ctex"]
+source_file="res://assets/misc_sprites/firewatch.png"
+dest_files=["res://.godot/imported/firewatch.png-d8e5930dd6a77a9fc08e3fb8840e4de7.ctex"]
 
 [params]
 

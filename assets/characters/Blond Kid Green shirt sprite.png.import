@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0aig61ou6ba2"
-path="res://.godot/imported/Desk with lamp (1).png-4eb08282ef5b342faff492825da8c026.ctex"
+uid="uid://e0sxuii8grhi"
+path="res://.godot/imported/Blond Kid Green shirt sprite.png-fef9aa9c0b5a8f25fd490fb0e6def326.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Desk with lamp (1).png"
-dest_files=["res://.godot/imported/Desk with lamp (1).png-4eb08282ef5b342faff492825da8c026.ctex"]
+source_file="res://assets/characters/Blond Kid Green shirt sprite.png"
+dest_files=["res://.godot/imported/Blond Kid Green shirt sprite.png-fef9aa9c0b5a8f25fd490fb0e6def326.ctex"]
 
 [params]
 

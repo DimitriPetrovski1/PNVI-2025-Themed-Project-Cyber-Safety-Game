@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://xp01ggubm4w2"
-path="res://.godot/imported/Ducks Fiesta.ttf-bc3e47184258cba1cfab956a79bf37ff.fontdata"
+path="res://.godot/imported/Ducks Fiesta.ttf-d71aa6fb9df8a2a354e909034153d0a2.fontdata"
 
 [deps]
 
-source_file="res://assets/Ducks Fiesta.ttf"
-dest_files=["res://.godot/imported/Ducks Fiesta.ttf-bc3e47184258cba1cfab956a79bf37ff.fontdata"]
+source_file="res://assets/other/Ducks Fiesta.ttf"
+dest_files=["res://.godot/imported/Ducks Fiesta.ttf-d71aa6fb9df8a2a354e909034153d0a2.fontdata"]
 
 [params]
 
