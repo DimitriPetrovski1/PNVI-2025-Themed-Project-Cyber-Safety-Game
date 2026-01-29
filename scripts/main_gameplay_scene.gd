@@ -192,6 +192,7 @@ func _on_real_life_menu_button_pressed() -> void:
 	show_menu("Real Life menu")
 
 
-func _on_background_button_pressed() -> void:
+
+func _on_background_button_button_down() -> void:
 	var canvas = $ManualPopupCanvasLayer
 	canvas.visible = false

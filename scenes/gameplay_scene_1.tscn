@@ -196,10 +196,10 @@ autowrap_mode = 1
 script = ExtResource("6_bnjt7")
 
 [node name="LoadProblemButton" type="Button" parent="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble"]
-offset_left = -102.907196
-offset_top = -24.957262
-offset_right = 33.035522
-offset_bottom = 77.264946
+offset_left = -99.69134
+offset_top = -19.145298
+offset_right = 36.25138
+offset_bottom = 83.076904
 theme_type_variation = &"FlatButton"
 theme_override_font_sizes/font_size = 4
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_qgjuv")
@@ -476,7 +476,6 @@ text = "Submit choices"
 
 [node name="ManualPopupCanvasLayer" type="CanvasLayer" parent="."]
 layer = 3
-visible = false
 
 [node name="BackgroundButton" type="Button" parent="ManualPopupCanvasLayer"]
 offset_right = 1151.0
@@ -546,11 +545,11 @@ text = "Email Manual"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="newCharacter" from="." to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/CustomerSprite" method="_on_gameplay_scene_1_new_character"]
 [connection signal="newCharacter" from="." to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/LoadProblemButton" method="_on_gameplay_scene_1_new_character"]
+[connection signal="newCharacter" from="." to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/CustomerSprite" method="_on_gameplay_scene_1_new_character"]
 [connection signal="newProblem" from="." to="." method="_on_new_problem"]
-[connection signal="newProblem" from="." to="HBoxContainer/RightPanelContainer/EmailNode" method="_on_gameplay_scene_1_new_problem"]
 [connection signal="newProblem" from="." to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/TextBubbleText" method="_on_gameplay_scene_1_new_problem"]
+[connection signal="newProblem" from="." to="HBoxContainer/RightPanelContainer/EmailNode" method="_on_gameplay_scene_1_new_problem"]
 [connection signal="newProblem" from="." to="HBoxContainer/RightPanelContainer/MessagesNode" method="_on_gameplay_scene_1_new_problem"]
 [connection signal="newProblem" from="." to="HBoxContainer/RightPanelContainer/RealLifeNode" method="_on_gameplay_scene_1_new_problem"]
 [connection signal="pressed" from="HBoxContainer/LeftPanelContainer/VBoxContainer/MenuPanel/EmailsMenuButton" to="." method="_on_emails_menu_button_pressed"]
@@ -565,4 +564,4 @@ vertical_alignment = 1
 [connection signal="pressed" from="HBoxContainer/RightPanelContainer/MessagesNode/VBoxContainer/MessagesSelectionPanel/MessagesSubmitSolutionButton" to="HBoxContainer/RightPanelContainer/MessagesNode" method="_on_messages_submit_solution_button_pressed"]
 [connection signal="submitSelection" from="HBoxContainer/RightPanelContainer/RealLifeNode" to="." method="_on_real_life_node_submit_selection"]
 [connection signal="pressed" from="HBoxContainer/RightPanelContainer/RealLifeNode/VBoxContainer/RealLifeLelectionPanel/RealLifeSubmitSolutionButton" to="HBoxContainer/RightPanelContainer/RealLifeNode" method="_on_real_life_submit_solution_button_pressed"]
-[connection signal="pressed" from="ManualPopupCanvasLayer/BackgroundButton" to="." method="_on_background_button_pressed"]
+[connection signal="button_down" from="ManualPopupCanvasLayer/BackgroundButton" to="." method="_on_background_button_button_down"]
