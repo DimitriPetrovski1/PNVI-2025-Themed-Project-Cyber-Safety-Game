@@ -81,7 +81,6 @@ func pickProblem():
 			newProb=ProblemDB.pick_random()
 	currentProblem = newProb
 	newProblem.emit(currentProblem)
-	print("new problem picked", currentProblem.get_category())
 
 
 # Called when the node enters the scene tree for the first time.
@@ -112,7 +111,7 @@ func gradeSolution(solutions:Array[String])->void:
 		newScoreDelta+=5
 	
 	score+=newScoreDelta
-	print(score)
+	print("new Score:",score)
 	pickCharacter()
 	pickProblem()
 

@@ -18,6 +18,8 @@ func buildSelectionSection(problem:MessagesProblem):
 		var cb := CheckButton.new()
 		cb.text = option
 		cb.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		cb.add_theme_icon_override("checked",ResourceLoader.load("res://assets/UI/Checkmark Selected.png"))
+		cb.add_theme_icon_override("unchecked",ResourceLoader.load("res://assets/UI/Checkmark Unselected.png"))
 		MessagesSelectionContainer.add_child(cb)
 		checkboxes.append(cb)
 
