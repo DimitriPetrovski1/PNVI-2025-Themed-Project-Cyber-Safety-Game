@@ -1,4 +1,4 @@
-﻿extends Problem
+extends Problem
 class_name MessagesProblem
 
 @export var sender_name:String

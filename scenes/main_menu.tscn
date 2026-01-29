@@ -1,35 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://crev2inf1u6xe"]
+[gd_scene load_steps=7 format=3 uid="uid://crev2inf1u6xe"]
 
-[ext_resource type="Texture2D" uid="uid://dupd5bqpmbvfr" path="res://assets/firewatch.png" id="1_7vrkn"]
-[ext_resource type="Script" uid="uid://dn12u7ocbrg15" path="res://main_menu.gd" id="1_fu7sn"]
-[ext_resource type="FontFile" uid="uid://xp01ggubm4w2" path="res://assets/Ducks Fiesta.ttf" id="2_fu7sn"]
+[ext_resource type="Script" uid="uid://dn12u7ocbrg15" path="res://scripts/main_menu.gd" id="1_fu7sn"]
+[ext_resource type="Texture2D" uid="uid://bmui16k70u28k" path="res://assets/misc_sprites/Main Menu Background.png" id="2_8ln24"]
+[ext_resource type="Texture2D" uid="uid://dj1qprqp6c0gh" path="res://assets/UI/Buttons/Brown Button.png" id="3_rtw2f"]
+[ext_resource type="FontFile" uid="uid://3j45hd4ewl0k" path="res://assets/other/PixelOperatorHB.ttf" id="4_oa1go"]
+[ext_resource type="FontFile" uid="uid://cdm0apbqxk666" path="res://assets/other/pixel_operator/PixelOperator8-Bold.ttf" id="5_tbmy8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jix8l"]
-texture = ExtResource("1_7vrkn")
-modulate_color = Color(0.4045111, 0.40451115, 0.4045111, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhts7"]
-bg_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 40
-corner_radius_top_right = 40
-corner_radius_bottom_right = 40
-corner_radius_bottom_left = 40
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vrkn"]
-bg_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 40
-corner_radius_top_right = 40
-corner_radius_bottom_right = 40
-corner_radius_bottom_left = 40
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fu7sn"]
-bg_color = Color(1, 1, 1, 0.7490196)
-corner_radius_top_left = 40
-corner_radius_top_right = 40
-corner_radius_bottom_right = 40
-corner_radius_bottom_left = 40
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7vrkn"]
+texture = ExtResource("2_8ln24")
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -45,6 +23,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = 2.0
+offset_right = 78.0
+offset_bottom = 105.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_jix8l")
@@ -56,82 +38,70 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -140.25
-offset_top = -128.375
+offset_left = -117.0
+offset_top = -15.0
 offset_right = 140.25
-offset_bottom = 128.375
+offset_bottom = 333.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 34
 
-[node name="Button" type="Button" parent="VBoxContainer"]
+[node name="Button" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 28
-theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
-theme_override_styles/hover = SubResource("StyleBoxFlat_fu7sn")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_7vrkn")
-text = "Start game"
+texture_normal = ExtResource("3_rtw2f")
+stretch_mode = 0
 
-[node name="Button2" type="Button" parent="VBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_oa1go")
+theme_override_font_sizes/font_size = 35
+text = "Start Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 28
-theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
-theme_override_styles/hover = SubResource("StyleBoxFlat_fu7sn")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_7vrkn")
+texture_normal = ExtResource("3_rtw2f")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/Button2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_oa1go")
+theme_override_font_sizes/font_size = 35
 text = "Options"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Button3" type="Button" parent="VBoxContainer"]
+[node name="Button3" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 28
-theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
-theme_override_styles/hover = SubResource("StyleBoxFlat_fu7sn")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_7vrkn")
-text = "Exit game"
+texture_normal = ExtResource("3_rtw2f")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/Button3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_oa1go")
+theme_override_font_sizes/font_size = 35
+text = "Exit Game"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -140,18 +110,19 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -160.5
-offset_top = -285.0
-offset_right = 160.5
-offset_bottom = -178.0
+offset_left = -671.0
+offset_top = -372.0
+offset_right = -59.084106
+offset_bottom = -237.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = -5
 theme_override_constants/shadow_offset_y = 6
-theme_override_fonts/font = ExtResource("2_fu7sn")
-theme_override_font_sizes/font_size = 51
-text = "Your problem, please"
+theme_override_fonts/font = ExtResource("5_tbmy8")
+theme_override_font_sizes/font_size = 42
+text = "Your Problem,
+Please"
 horizontal_alignment = 1
 vertical_alignment = 1
 

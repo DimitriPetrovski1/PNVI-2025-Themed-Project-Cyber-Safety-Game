@@ -1,4 +1,4 @@
-﻿@abstract 
+@abstract 
 class_name  Problem
 extends Resource
 

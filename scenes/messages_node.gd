@@ -9,8 +9,6 @@ func _ready() -> void:
 	visible = false
 
 
-
-
 func buildSelectionSection(problem:MessagesProblem):
 	checkboxes = []
 	var MessagesSelectionContainer =  $VBoxContainer/MessagesSelectionPanel/MessagesSelectionContainer
@@ -54,9 +52,6 @@ func _on_gameplay_scene_1_new_problem(problem: Problem) -> void:
 			buildSelectionSection(problem)
 
 
-
-
-
 func _on_messages_submit_solution_button_pressed() -> void:
 	var selections:Array[String] = []
 	
@@ -69,6 +64,6 @@ func _on_messages_submit_solution_button_pressed() -> void:
 	submitSelection.emit(selections)
 
 
-func _on_load_problem_button_show_problem() -> void:
+func _on_texture_button_show_problem() -> void:
 	if currProblem is MessagesProblem:
 		visible = true

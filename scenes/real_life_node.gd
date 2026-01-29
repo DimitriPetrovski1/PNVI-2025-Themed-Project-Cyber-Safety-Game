@@ -42,6 +42,7 @@ func _on_real_life_submit_solution_button_pressed() -> void:
 	visible = false
 	submitSelection.emit(selections)
 
-func _on_load_problem_button_show_problem() -> void:
+
+func _on_texture_button_show_problem() -> void:
 	if currProblem is RealLifeProblem:
 		visible = true
