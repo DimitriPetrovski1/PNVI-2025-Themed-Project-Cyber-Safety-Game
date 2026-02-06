@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://dn12u7ocbrg15" path="res://scripts/main_menu.gd" id="1_fu7sn"]
 [ext_resource type="Texture2D" uid="uid://bmui16k70u28k" path="res://assets/misc_sprites/Main Menu Background.png" id="2_8ln24"]
 [ext_resource type="Texture2D" uid="uid://dj1qprqp6c0gh" path="res://assets/UI/Buttons/Brown Button.png" id="3_rtw2f"]
-[ext_resource type="FontFile" uid="uid://3j45hd4ewl0k" path="res://assets/other/PixelOperatorHB.ttf" id="4_oa1go"]
-[ext_resource type="FontFile" uid="uid://cdm0apbqxk666" path="res://assets/other/pixel_operator/PixelOperator8-Bold.ttf" id="5_tbmy8"]
+[ext_resource type="FontFile" uid="uid://corb1yiw63hdc" path="res://assets/Fonts/PixelOperatorHB.ttf" id="4_oa1go"]
+[ext_resource type="FontFile" uid="uid://cdm0apbqxk666" path="res://assets/Fonts/pixel_operator/PixelOperator8-Bold.ttf" id="5_tbmy8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jix8l"]
 texture = ExtResource("2_8ln24")

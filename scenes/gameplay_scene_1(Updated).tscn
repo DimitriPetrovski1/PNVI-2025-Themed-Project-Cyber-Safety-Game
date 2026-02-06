@@ -1,0 +1,85 @@
+[gd_scene load_steps=5 format=3 uid="uid://c48c275vfnbsl"]
+
+[ext_resource type="Texture2D" uid="uid://c6p03xhyqrbv3" path="res://assets/misc_sprites/gameplay_office_with_empty_wall.png" id="1_exdhy"]
+[ext_resource type="Texture2D" uid="uid://6qhj7tqonhkf" path="res://assets/UI/Buttons/Manual Button.png" id="2_4e24p"]
+[ext_resource type="Texture2D" uid="uid://b2l44p10xdfas" path="res://assets/UI/Buttons/Problem Button.png" id="3_rjphi"]
+[ext_resource type="Texture2D" uid="uid://vyl0mwpvy5cg" path="res://assets/UI/Buttons/Shop Button.png" id="4_f2sbj"]
+
+[node name="GameplayScene1(updated)" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 853.3334
+grow_horizontal = 2
+texture = ExtResource("1_exdhy")
+expand_mode = 5
+
+[node name="Open Manual Button" type="TextureButton" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.013
+anchor_top = 0.015000001
+anchor_right = 0.126
+anchor_bottom = 0.13100001
+offset_left = 0.3600006
+offset_top = 1.1999989
+offset_right = 0.09500122
+offset_bottom = 1.2133179
+texture_normal = ExtResource("2_4e24p")
+stretch_mode = 0
+
+[node name="MenuButton" type="MenuButton" parent="TextureRect/Open Manual Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+item_count = 1
+popup/item_0/text = "Manual"
+popup/item_0/id = 0
+metadata/_edit_lock_ = true
+
+[node name="Open Problem Button" type="TextureButton" parent="TextureRect"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 123.0
+offset_right = 161.375
+offset_bottom = 222.0
+texture_normal = ExtResource("3_rjphi")
+stretch_mode = 0
+
+[node name="MenuButton" type="MenuButton" parent="TextureRect/Open Problem Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Open Shop Button" type="TextureButton" parent="TextureRect"]
+layout_mode = 1
+offset_left = 18.0
+offset_top = 234.0
+offset_right = 162.375
+offset_bottom = 333.0
+texture_normal = ExtResource("4_f2sbj")
+stretch_mode = 0
+
+[node name="MenuButton" type="MenuButton" parent="TextureRect/Open Shop Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true

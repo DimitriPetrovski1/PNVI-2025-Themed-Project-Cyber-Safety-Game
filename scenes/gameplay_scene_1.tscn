@@ -1,21 +1,21 @@
 [gd_scene load_steps=38 format=3 uid="uid://b5ktasytww183"]
 
-[ext_resource type="Script" uid="uid://coglasllogq5j" path="res://scripts/main_gameplay_scene.gd" id="1_8kcot"]
+[ext_resource type="Script" uid="uid://cln0tyorr0hol" path="res://scripts/main_gameplay_scene.gd" id="1_8kcot"]
 [ext_resource type="Texture2D" uid="uid://cjd7tfamtn2m3" path="res://assets/UI/Top Left Panel - Manual.png" id="1_shio3"]
 [ext_resource type="Texture2D" uid="uid://7ssj31kayluo" path="res://assets/misc_sprites/Bottom Left panel - Desk.png" id="2_k0a5j"]
-[ext_resource type="FontFile" uid="uid://corb1yiw63hdc" path="res://assets/other/PixelOperatorHB.ttf" id="3_k3fr3"]
+[ext_resource type="FontFile" uid="uid://corb1yiw63hdc" path="res://assets/Fonts/PixelOperatorHB.ttf" id="3_k3fr3"]
 [ext_resource type="Texture2D" uid="uid://lp1qivq8fe3n" path="res://assets/misc_sprites/Bottom Left Panel - Background.png" id="3_vfncy"]
 [ext_resource type="Texture2D" uid="uid://b6vp2qu2dnp6f" path="res://assets/misc_sprites/Right Panel - Wooden Desk.png" id="4_8kcot"]
 [ext_resource type="Texture2D" uid="uid://bg1511c7cpui5" path="res://assets/UI/TextBubble.png" id="4_vfncy"]
 [ext_resource type="Texture2D" uid="uid://bq0hvnjiy8xo3" path="res://assets/UI/Right Panel - Email.png" id="6_8kcot"]
 [ext_resource type="Texture2D" uid="uid://dwympexmcckpi" path="res://assets/characters/Single_Kid_Sprite_1.png" id="6_amqq1"]
-[ext_resource type="Script" uid="uid://bgm0jwxhk50g3" path="res://scenes/text_bubble_text.gd" id="6_bnjt7"]
-[ext_resource type="Script" uid="uid://byqasxvfsftjb" path="res://scenes/customer_sprite.gd" id="7_bnjt7"]
+[ext_resource type="Script" uid="uid://ckl081hts2jol" path="res://scenes/text_bubble_text.gd" id="6_bnjt7"]
+[ext_resource type="Script" uid="uid://b81f7cnxwrxmd" path="res://scenes/customer_sprite.gd" id="7_bnjt7"]
 [ext_resource type="Script" uid="uid://lvm4l80hyvcb" path="res://scenes/load_problem_texture_button.gd" id="10_yi01h"]
-[ext_resource type="Script" uid="uid://b5hoijio3qig" path="res://scenes/email_node.gd" id="11_jyq0k"]
-[ext_resource type="Script" uid="uid://djk2fgq6sctwp" path="res://scenes/messages_node.gd" id="13_1sg7f"]
+[ext_resource type="Script" uid="uid://b8nlq2sjpo1vc" path="res://scenes/email_node.gd" id="11_jyq0k"]
+[ext_resource type="Script" uid="uid://47eax1b8dlr3" path="res://scenes/messages_node.gd" id="13_1sg7f"]
 [ext_resource type="Texture2D" uid="uid://b1eru37a53nhj" path="res://assets/UI/Right Panel - Message.png" id="14_ujqrd"]
-[ext_resource type="Script" uid="uid://boxa3gm7bbwki" path="res://scenes/real_life_node.gd" id="15_5my5b"]
+[ext_resource type="Script" uid="uid://jualthnwyhwc" path="res://scenes/real_life_node.gd" id="15_5my5b"]
 [ext_resource type="Texture2D" uid="uid://ddq4tfyv82o4j" path="res://assets/UI/Right_Panel_-_Everyday_Life.png" id="16_cbj1o"]
 [ext_resource type="Texture2D" uid="uid://cfsdqobfvlw7q" path="res://assets/UI/Manual Pop Up - Middle Screen.png" id="17_cbj1o"]
 
@@ -157,8 +157,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -257.0
+offset_top = 6.0
 offset_right = 257.0
-offset_bottom = 82.0
+offset_bottom = 88.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("3_k3fr3")
 theme_override_font_sizes/font_size = 75
