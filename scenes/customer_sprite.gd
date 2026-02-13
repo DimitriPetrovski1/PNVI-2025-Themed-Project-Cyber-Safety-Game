@@ -3,9 +3,9 @@ extends Sprite2D
 signal character_stopped
 signal character_exited
 
-@export var enter_duration := 1
-@export var bob_distance := 5.0
-@export var bob_speed := 1.5
+@export var enter_duration := 1.3
+@export var bob_distance := 1
+@export var bob_speed := 1
 
 var target_position: Vector2
 var bob_time := 0.0

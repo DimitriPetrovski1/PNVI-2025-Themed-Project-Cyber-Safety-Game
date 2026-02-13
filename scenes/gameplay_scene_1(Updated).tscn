@@ -17,10 +17,11 @@ grow_vertical = 2
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 853.3334
+offset_right = -1.0
+offset_bottom = 771.0
 grow_horizontal = 2
 texture = ExtResource("1_exdhy")
-expand_mode = 5
+expand_mode = 1
 
 [node name="Open Manual Button" type="TextureButton" parent="TextureRect"]
 layout_mode = 1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://b5ktasytww183"]
+[gd_scene load_steps=43 format=3 uid="uid://b5ktasytww183"]
 
 [ext_resource type="Script" uid="uid://cln0tyorr0hol" path="res://scripts/main_gameplay_scene.gd" id="1_8kcot"]
 [ext_resource type="Texture2D" uid="uid://cjd7tfamtn2m3" path="res://assets/UI/Top Left Panel - Manual.png" id="1_shio3"]
@@ -17,6 +17,7 @@
 [ext_resource type="Script" uid="uid://bj8r0b1re16st" path="res://scenes/bye_button.gd" id="11_cfo66"]
 [ext_resource type="Script" uid="uid://b8nlq2sjpo1vc" path="res://scenes/email_node.gd" id="11_jyq0k"]
 [ext_resource type="Script" uid="uid://47eax1b8dlr3" path="res://scenes/messages_node.gd" id="13_1sg7f"]
+[ext_resource type="Script" uid="uid://8s32fcrtxxxf" path="res://scenes/label.gd" id="14_8cuma"]
 [ext_resource type="Texture2D" uid="uid://b1eru37a53nhj" path="res://assets/UI/Right Panel - Message.png" id="14_ujqrd"]
 [ext_resource type="Script" uid="uid://jualthnwyhwc" path="res://scenes/real_life_node.gd" id="15_5my5b"]
 [ext_resource type="Texture2D" uid="uid://cshgnopp3si0a" path="res://assets/UI/Buttons/Green Button.png" id="15_lovhm"]
@@ -272,6 +273,16 @@ position = Vector2(267, 211)
 scale = Vector2(2.4133332, 2.4133332)
 texture = ExtResource("6_amqq1")
 script = ExtResource("7_bnjt7")
+
+[node name="Money" type="Label" parent="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0.7176471, 0, 1)
+theme_override_fonts/font = ExtResource("3_k3fr3")
+theme_override_font_sizes/font_size = 27
+text = "Money Spot"
+script = ExtResource("14_8cuma")
 
 [node name="RightPanelContainer" type="PanelContainer" parent="HBoxContainer"]
 layout_mode = 2
