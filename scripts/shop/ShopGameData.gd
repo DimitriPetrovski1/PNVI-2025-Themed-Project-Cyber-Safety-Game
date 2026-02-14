@@ -5,6 +5,7 @@ var money: int = 100
 
 signal equipment_changed
 signal money_changed(new_amount)
+signal bought_item
 
 var owned_items: Array[String] = []
 var equipped_items: Array[String] = []
@@ -31,10 +32,16 @@ func buy_item(id: String, price: int) -> bool:
 	
 	money -= price
 	owned_items.append(id)
+	bought_item.emit(id)
 	save_game()
 	return true
 
 
+func reset_shop()-> void:
+	owned_items.clear()
+	money=1000
+	money_changed.emit(money)
+	save_game()
 # =========================
 # EQUIP
 # =========================

@@ -22,7 +22,9 @@ func _ready():
 					accessories.append(res)
 			file_name = dir.get_next()
 		dir.list_dir_end()
+	accessories.sort_custom(func(a, b): return int(a.id) < int(b.id))
 
+	
 	# 2. Populate shop
 	for accessory in accessories:
 		# Create a Horizontal wrapper for each shop item
@@ -53,10 +55,15 @@ func _ready():
 		# We make the node fill the entire frame_anchor area
 		tex_rect.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 		# Optional: Add a small margin so the accessory doesn't touch the frame edges
-		tex_rect.offset_left = 10
-		tex_rect.offset_top = 10
-		tex_rect.offset_right = -10
-		tex_rect.offset_bottom = -10
+		if accessory.id not in ShopGameData.owned_items:
+			tex_rect.modulate = Color(1,1,1,0.5)
+		else:
+			tex_rect.modulate = Color(1,1,1,1)
+		tex_rect.offset_left = 15
+		tex_rect.offset_top = 15
+		tex_rect.offset_right = -15
+		tex_rect.offset_bottom = -15
+		tex_rect.name = "AccessoryIcon"
 		frame_anchor.add_child(tex_rect)
 
 		# --- THE BUTTON ---
@@ -86,17 +93,32 @@ func _on_shop_item_pressed(btn: Button):
 
 func _update_buttons():
 	for item_container in grid.get_children():
-		# The button is the second child of the HBox
+		# 1. Get the Frame Anchor (Index 0) and then the Accessory Texture (Index 1 inside the anchor)
+		var frame_anchor = item_container.get_child(0)
+		var tex_rect = frame_anchor.get_node("AccessoryIcon")
+		
+		# 2. Get the Button (Index 1 of the item_container)
 		var btn = item_container.get_child(1)
+		
 		var accessory: AccessoryData = btn.get_meta("accessory")
 		
+		# UPDATE ALPHA/VISUALS
 		if accessory.id in ShopGameData.owned_items:
+			tex_rect.modulate.a = 1.0 # Fully visible when owned
+			
+			# UPDATE BUTTON TEXT
 			if accessory.id in ShopGameData.equipped_items:
-				btn.text = accessory.name + "\n(Equipped)"
+				btn.text = "Equipped"
 			else:
-				btn.text = accessory.name + "\n(Owned)"
+				btn.text = "Unequipped"
 		else:
+			tex_rect.modulate.a = 0.5 # Faded when not owned
 			btn.text = accessory.name + "\n$" + str(accessory.price)
+		
 
-func _on_color_rect_pressed() -> void:
+func _on_background_back_button_pressed() -> void:
 	queue_free()
+
+
+func _on_button_pressed() -> void:
+	ShopGameData.reset_shop()
