@@ -4,6 +4,7 @@ const SAVE_PATH := "user://shop_save.json"
 var money: int = 100
 
 signal equipment_changed
+signal money_changed(new_amount)
 
 var owned_items: Array[String] = []
 var equipped_items: Array[String] = []
@@ -11,6 +12,12 @@ var equipped_items: Array[String] = []
 func _ready():
 	load_game()
 
+
+func add_money(amount: int):
+	money += amount
+	save_game()
+	money_changed.emit(money) # Tell everyone the money changed!
+	
 
 # =========================
 # BUY

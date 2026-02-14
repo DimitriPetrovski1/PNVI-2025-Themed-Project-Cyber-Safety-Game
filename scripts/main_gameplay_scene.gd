@@ -7,6 +7,7 @@ var ProblemDB:Array[Problem]
 signal newProblem(problem:Problem)
 signal newCharacter(characterTexture:Texture2D)
 signal graded_solution
+signal score_into_money
 var currentCharacter:Texture2D = null
 var currentProblem:Problem = null
 
@@ -126,6 +127,8 @@ func gradeSolution(solutions:Array[String])->void:
 		newScoreDelta+=5
 	
 	score+=newScoreDelta
+	if newScoreDelta > 0:
+		ShopGameData.add_money(newScoreDelta*10)
 	print("new Score:",score)
 
 	

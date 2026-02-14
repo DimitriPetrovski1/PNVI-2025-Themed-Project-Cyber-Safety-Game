@@ -265,10 +265,18 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="RightPanelContainer" type="PanelContainer" parent="."]
-visible = false
-layout_mode = 0
-offset_right = 1280.0
-offset_bottom = 720.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -379.5
+offset_top = -360.0
+offset_right = 379.5
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 1.13
 theme_override_styles/panel = SubResource("StyleBoxEmpty_3ggs6")
@@ -629,53 +637,65 @@ vertical_alignment = 1
 layout_mode = 0
 offset_left = 37.0
 offset_top = 32.0
-offset_right = 196.0
-offset_bottom = 116.0
-theme_override_constants/separation = 15
+offset_right = 243.0
+offset_bottom = 127.0
+theme_override_constants/separation = 10
 script = ExtResource("20_ypkrs")
 
 [node name="0" type="TextureRect" parent="Accessories"]
 layout_mode = 2
 texture = ExtResource("21_3ggs6")
+expand_mode = 3
 
 [node name="1" type="TextureRect" parent="Accessories"]
 layout_mode = 2
 texture = ExtResource("22_e7oxk")
+expand_mode = 3
 
 [node name="2" type="TextureRect" parent="Accessories"]
 layout_mode = 2
 texture = ExtResource("23_uvkju")
+expand_mode = 3
+
+[node name="Money" type="Label" parent="."]
+layout_mode = 0
+offset_left = 198.0
+offset_top = 587.0
+offset_right = 352.0
+offset_bottom = 625.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.7882353, 0.38431373, 0, 1)
+theme_override_fonts/font = ExtResource("3_k3fr3")
+theme_override_font_sizes/font_size = 32
+text = "Money Spot"
+script = ExtResource("14_8cuma")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-offset_left = 3.0
-offset_top = 420.0
-offset_right = 174.0
-offset_bottom = 724.0
+layout_mode = 0
+offset_left = 26.0
+offset_top = 372.0
+offset_right = 176.0
+offset_bottom = 702.0
 theme_override_constants/separation = 15
 
 [node name="Open Shop Button" type="TextureButton" parent="VBoxContainer"]
+custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
 texture_normal = ExtResource("21_wjgy3")
-stretch_mode = 4
+stretch_mode = 0
 
 [node name="Open Problem Button" type="TextureButton" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 texture_normal = ExtResource("23_3ggs6")
+stretch_mode = 0
 
 [node name="Open Manual Button" type="TextureButton" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 texture_normal = ExtResource("25_uvkju")
-
-[node name="Money" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("3_k3fr3")
-theme_override_font_sizes/font_size = 27
-text = "Money Spot"
-script = ExtResource("14_8cuma")
+stretch_mode = 0
 
 [connection signal="graded_solution" from="." to="WaitingRoomPanelContainer/TextBubble/TextBubbleText" method="_on_gameplay_scene_1_graded_solution"]
 [connection signal="newCharacter" from="." to="WaitingRoomPanelContainer/CustomerSprite" method="_on_gameplay_scene_1_new_character"]
