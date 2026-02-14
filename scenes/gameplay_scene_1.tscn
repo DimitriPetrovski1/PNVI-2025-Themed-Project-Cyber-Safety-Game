@@ -1,12 +1,9 @@
-[gd_scene load_steps=43 format=3 uid="uid://b5ktasytww183"]
+[gd_scene load_steps=48 format=3 uid="uid://b5ktasytww183"]
 
 [ext_resource type="Script" uid="uid://cln0tyorr0hol" path="res://scripts/main_gameplay_scene.gd" id="1_8kcot"]
-[ext_resource type="Texture2D" uid="uid://cjd7tfamtn2m3" path="res://assets/UI/Top Left Panel - Manual.png" id="1_shio3"]
-[ext_resource type="Texture2D" uid="uid://7ssj31kayluo" path="res://assets/misc_sprites/Bottom Left panel - Desk.png" id="2_k0a5j"]
 [ext_resource type="FontFile" uid="uid://corb1yiw63hdc" path="res://assets/Fonts/PixelOperatorHB.ttf" id="3_k3fr3"]
-[ext_resource type="Texture2D" uid="uid://lp1qivq8fe3n" path="res://assets/misc_sprites/Bottom Left Panel - Background.png" id="3_vfncy"]
-[ext_resource type="Texture2D" uid="uid://b6vp2qu2dnp6f" path="res://assets/misc_sprites/Right Panel - Wooden Desk.png" id="4_8kcot"]
 [ext_resource type="Texture2D" uid="uid://bg1511c7cpui5" path="res://assets/UI/TextBubble.png" id="4_vfncy"]
+[ext_resource type="Texture2D" uid="uid://c6p03xhyqrbv3" path="res://assets/misc_sprites/gameplay_office_with_empty_wall.png" id="4_yi01h"]
 [ext_resource type="Texture2D" uid="uid://bq0hvnjiy8xo3" path="res://assets/UI/Right Panel - Email.png" id="6_8kcot"]
 [ext_resource type="Texture2D" uid="uid://dwympexmcckpi" path="res://assets/characters/Single_Kid_Sprite_1.png" id="6_amqq1"]
 [ext_resource type="Script" uid="uid://ckl081hts2jol" path="res://scenes/text_bubble_text.gd" id="6_bnjt7"]
@@ -23,26 +20,13 @@
 [ext_resource type="Texture2D" uid="uid://cshgnopp3si0a" path="res://assets/UI/Buttons/Green Button.png" id="15_lovhm"]
 [ext_resource type="Texture2D" uid="uid://ddq4tfyv82o4j" path="res://assets/UI/Right_Panel_-_Everyday_Life.png" id="16_cbj1o"]
 [ext_resource type="Texture2D" uid="uid://cfsdqobfvlw7q" path="res://assets/UI/Manual Pop Up - Middle Screen.png" id="17_cbj1o"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1q2bx"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_amqq1"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5my5b"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cbj1o"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k3fr3"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q73r7"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lovhm"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1sg7f"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yi01h"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cfo66"]
+[ext_resource type="Script" uid="uid://bkxkmx3ej5t00" path="res://scenes/accessories.gd" id="20_ypkrs"]
+[ext_resource type="Texture2D" uid="uid://bow0ip6a1lqmk" path="res://assets/rewards/BronzeMedal1.png" id="21_3ggs6"]
+[ext_resource type="Texture2D" uid="uid://vyl0mwpvy5cg" path="res://assets/UI/Buttons/Shop Button.png" id="21_wjgy3"]
+[ext_resource type="Texture2D" uid="uid://bh4krxrexulp0" path="res://assets/rewards/SilverMedal1.png" id="22_e7oxk"]
+[ext_resource type="Texture2D" uid="uid://b2l44p10xdfas" path="res://assets/UI/Buttons/Problem Button.png" id="23_3ggs6"]
+[ext_resource type="Texture2D" uid="uid://chvsow57macjr" path="res://assets/rewards/GoldMedal1.png" id="23_uvkju"]
+[ext_resource type="Texture2D" uid="uid://6qhj7tqonhkf" path="res://assets/UI/Buttons/Manual Button.png" id="25_uvkju"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cbj1o"]
 bg_color = Color(0.078431375, 0.023529412, 0.003921569, 0.9490196)
@@ -66,6 +50,28 @@ bg_color = Color(0.078431375, 0.023529412, 0.003921569, 0.9490196)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ypkrs"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3ggs6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1q2bx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_amqq1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5my5b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cbj1o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k3fr3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q73r7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lovhm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1sg7f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yi01h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cfo66"]
+
 [node name="GameplayScene1" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -84,552 +90,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.38724923, 0.39594385, 0.80685467, 1)
-
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="LeftPanelContainer" type="PanelContainer" parent="HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/LeftPanelContainer"]
-layout_mode = 2
-
-[node name="MenuPanel" type="Panel" parent="HBoxContainer/LeftPanelContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/LeftPanelContainer/VBoxContainer/MenuPanel"]
-layout_mode = 0
-offset_right = 599.8199
-offset_bottom = 358.0
-texture = ExtResource("1_shio3")
-expand_mode = 1
-
-[node name="EmailsMenuButton" type="MenuButton" parent="HBoxContainer/LeftPanelContainer/VBoxContainer/MenuPanel"]
-layout_mode = 0
-offset_left = 31.0
-offset_top = 174.0
-offset_right = 178.0
-offset_bottom = 262.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0.078431375, 0.023529412, 0.003921569, 1)
-theme_override_colors/font_pressed_color = Color(0.078431375, 0.023529412, 0.003921569, 1)
-theme_override_colors/font_hover_color = Color(0.078431375, 0.023529412, 0.003921569, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.078431375, 0.023529412, 0.003921569, 1)
-theme_override_fonts/font = ExtResource("3_k3fr3")
-theme_override_font_sizes/font_size = 37
-text = "Emails"
-
-[node name="MessagesMenuButton" type="MenuButton" parent="HBoxContainer/LeftPanelContainer/VBoxContainer/MenuPanel"]
-layout_mode = 0
-offset_left = 211.0
-offset_top = 176.0
-offset_right = 380.0
-offset_bottom = 261.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0.078431375, 0.023529412, 0.003921569, 1)
-theme_override_colors/font_pressed_color = Color(0.078431375, 0.023529412, 0.003921569, 1)
-theme_override_colors/font_hover_color = Color(0.078431375, 0.023529412, 0.003921569, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.078431375, 0.023529412, 0.003921569, 1)
-theme_override_fonts/font = ExtResource("3_k3fr3")
-theme_override_font_sizes/font_size = 39
-text = "Messages"
-
-[node name="RealLifeMenuButton" type="MenuButton" parent="HBoxContainer/LeftPanelContainer/VBoxContainer/MenuPanel"]
-layout_mode = 0
-offset_left = 412.0
-offset_top = 176.0
-offset_right = 572.0
-offset_bottom = 261.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0.078431375, 0.023529412, 0.003921569, 1)
-theme_override_colors/font_pressed_color = Color(0.078431375, 0.023529412, 0.003921569, 1)
-theme_override_colors/font_hover_color = Color(0.078431375, 0.023529412, 0.003921569, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.078431375, 0.023529412, 0.003921569, 1)
-theme_override_fonts/font = ExtResource("3_k3fr3")
-theme_override_font_sizes/font_size = 38
-text = "Real Life"
-
-[node name="Label" type="Label" parent="HBoxContainer/LeftPanelContainer/VBoxContainer/MenuPanel"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -257.0
-offset_top = 6.0
-offset_right = 257.0
-offset_bottom = 88.0
-grow_horizontal = 2
-theme_override_fonts/font = ExtResource("3_k3fr3")
-theme_override_font_sizes/font_size = 75
-text = "Manual"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="WaitingRoomPanelContainer" type="PanelContainer" parent="HBoxContainer/LeftPanelContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="DeskSprite" type="TextureRect" parent="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer"]
-z_index = 2
-layout_mode = 2
-texture = ExtResource("2_k0a5j")
-expand_mode = 1
-
-[node name="BackgroundTR" type="TextureRect" parent="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer"]
-layout_mode = 2
-texture = ExtResource("3_vfncy")
-expand_mode = 1
-stretch_mode = 4
-
-[node name="TextBubble" type="TextureRect" parent="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer"]
-custom_minimum_size = Vector2(250, 150)
-layout_direction = 4
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 0
-texture = ExtResource("4_vfncy")
-script = ExtResource("7_lovhm")
-
-[node name="TextBubbleText" type="Label" parent="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble"]
-layout_mode = 1
-offset_left = 10.0
-offset_top = 8.0
-offset_right = 186.0
-offset_bottom = 104.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_constants/line_spacing = 1
-theme_override_constants/paragraph_spacing = 0
-theme_override_fonts/font = ExtResource("3_k3fr3")
-theme_override_font_sizes/font_size = 18
-text = "Lorem ipsum Lorem ipsum Lorem ipsum"
-autowrap_mode = 2
-script = ExtResource("6_bnjt7")
-
-[node name="Checkout Button" type="TextureButton" parent="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble"]
-layout_mode = 0
-offset_left = 141.99998
-offset_top = 75.0
-offset_right = 234.8
-offset_bottom = 108.0
-texture_normal = ExtResource("8_q73r7")
-stretch_mode = 0
-script = ExtResource("10_yi01h")
-
-[node name="Label" type="Label" parent="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/Checkout Button"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -34.5
-offset_top = -10.5
-offset_right = 34.5
-offset_bottom = 10.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("3_k3fr3")
-text = "Checkout"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Bye Button" type="TextureButton" parent="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble"]
-layout_mode = 0
-offset_left = 147.0
-offset_top = 70.0
-offset_right = 228.0
-offset_bottom = 110.0
-texture_normal = ExtResource("8_q73r7")
-stretch_mode = 0
-script = ExtResource("11_cfo66")
-
-[node name="Label" type="Label" parent="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/Bye Button"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -34.5
-offset_top = -10.5
-offset_right = 34.5
-offset_bottom = 10.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("3_k3fr3")
-text = "Bye Bye"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CustomerSprite" type="Sprite2D" parent="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer"]
-position = Vector2(267, 211)
-scale = Vector2(2.4133332, 2.4133332)
-texture = ExtResource("6_amqq1")
-script = ExtResource("7_bnjt7")
-
-[node name="Money" type="Label" parent="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer"]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-theme_override_colors/font_color = Color(0, 0.7176471, 0, 1)
-theme_override_fonts/font = ExtResource("3_k3fr3")
-theme_override_font_sizes/font_size = 27
-text = "Money Spot"
-script = ExtResource("14_8cuma")
-
-[node name="RightPanelContainer" type="PanelContainer" parent="HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 1.13
-
-[node name="woodenBackgroundTR" type="TextureRect" parent="HBoxContainer/RightPanelContainer"]
-layout_mode = 2
-texture = ExtResource("4_8kcot")
-
-[node name="EmailNode" type="Control" parent="HBoxContainer/RightPanelContainer"]
-layout_mode = 2
-script = ExtResource("11_jyq0k")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/RightPanelContainer/EmailNode"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -357.99347
-offset_right = 677.0
-offset_bottom = 361.1803
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="EmailDisplayPanel" type="Panel" parent="HBoxContainer/RightPanelContainer/EmailNode/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 2.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_1q2bx")
-
-[node name="EmailBackgroundTR" type="TextureRect" parent="HBoxContainer/RightPanelContainer/EmailNode/VBoxContainer/EmailDisplayPanel"]
-z_as_relative = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -7.0
-offset_top = -11.006531
-offset_right = 15.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("6_8kcot")
-expand_mode = 5
-stretch_mode = 5
-
-[node name="EmailFromLabel" type="Label" parent="HBoxContainer/RightPanelContainer/EmailNode/VBoxContainer/EmailDisplayPanel"]
-layout_mode = 0
-offset_left = 253.0
-offset_top = 103.99347
-offset_right = 650.0
-offset_bottom = 148.99347
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_k3fr3")
-theme_override_font_sizes/font_size = 23
-text = "From example"
-vertical_alignment = 1
-
-[node name="EmailSubjectLabel" type="Label" parent="HBoxContainer/RightPanelContainer/EmailNode/VBoxContainer/EmailDisplayPanel"]
-layout_mode = 0
-offset_left = 252.0
-offset_top = 166.99347
-offset_right = 650.0
-offset_bottom = 211.99347
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_k3fr3")
-theme_override_font_sizes/font_size = 23
-text = "Subject example"
-vertical_alignment = 1
-
-[node name="EmailBodyLabel" type="Label" parent="HBoxContainer/RightPanelContainer/EmailNode/VBoxContainer/EmailDisplayPanel"]
-layout_mode = 0
-offset_left = 26.0
-offset_top = 236.99347
-offset_right = 654.0
-offset_bottom = 434.99347
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_k3fr3")
-theme_override_font_sizes/font_size = 26
-text = "Subject example"
-autowrap_mode = 3
-
-[node name="EmailSelectionPanel" type="Panel" parent="HBoxContainer/RightPanelContainer/EmailNode/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxEmpty_amqq1")
-
-[node name="EmailSelectionContainer" type="VBoxContainer" parent="HBoxContainer/RightPanelContainer/EmailNode/VBoxContainer/EmailSelectionPanel"]
-layout_mode = 0
-offset_left = 16.0
-offset_top = -25.00653
-offset_right = 496.0
-offset_bottom = 227.99347
-
-[node name="EmailSubmitSolutionButton" type="TextureButton" parent="HBoxContainer/RightPanelContainer/EmailNode/VBoxContainer/EmailSelectionPanel"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = 167.5
-offset_top = -85.00653
-offset_right = 326.5
-offset_bottom = -13.006531
-grow_horizontal = 2
-grow_vertical = 0
-texture_normal = ExtResource("15_lovhm")
-stretch_mode = 0
-
-[node name="EmailSubLabel" type="Label" parent="HBoxContainer/RightPanelContainer/EmailNode/VBoxContainer/EmailSelectionPanel/EmailSubmitSolutionButton"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -57.5
-offset_top = -23.5
-offset_right = 57.5
-offset_bottom = 23.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("3_k3fr3")
-theme_override_font_sizes/font_size = 40
-text = "Submit"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MessagesNode" type="Control" parent="HBoxContainer/RightPanelContainer"]
-visible = false
-layout_mode = 2
-script = ExtResource("13_1sg7f")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/RightPanelContainer/MessagesNode"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -357.99347
-offset_right = 677.0
-offset_bottom = 361.1803
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="MessagesDisplayPanel" type="Panel" parent="HBoxContainer/RightPanelContainer/MessagesNode/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 2.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_1q2bx")
-
-[node name="MessagesBackgroundTR" type="TextureRect" parent="HBoxContainer/RightPanelContainer/MessagesNode/VBoxContainer/MessagesDisplayPanel"]
-z_as_relative = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("14_ujqrd")
-expand_mode = 5
-stretch_mode = 5
-
-[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/RightPanelContainer/MessagesNode/VBoxContainer/MessagesDisplayPanel"]
-layout_mode = 0
-offset_left = 18.0
-offset_top = 137.99347
-offset_right = 663.98376
-offset_bottom = 391.98694
-
-[node name="VerticallScrollableContainer" type="VScrollBar" parent="HBoxContainer/RightPanelContainer/MessagesNode/VBoxContainer/MessagesDisplayPanel/ScrollContainer"]
-layout_mode = 2
-theme_override_styles/scroll = SubResource("StyleBoxEmpty_5my5b")
-theme_override_styles/scroll_focus = SubResource("StyleBoxEmpty_cbj1o")
-theme_override_styles/grabber = SubResource("StyleBoxEmpty_k3fr3")
-theme_override_styles/grabber_highlight = SubResource("StyleBoxEmpty_q73r7")
-theme_override_styles/grabber_pressed = SubResource("StyleBoxEmpty_lovhm")
-max_value = 1000.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/RightPanelContainer/MessagesNode/VBoxContainer/MessagesDisplayPanel/ScrollContainer/VerticallScrollableContainer"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/RightPanelContainer/MessagesNode/VBoxContainer/MessagesDisplayPanel/ScrollContainer/VerticallScrollableContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxEmpty_1sg7f")
-
-[node name="TextBubble" type="TextureRect" parent="HBoxContainer/RightPanelContainer/MessagesNode/VBoxContainer/MessagesDisplayPanel/ScrollContainer/VerticallScrollableContainer/VBoxContainer/PanelContainer"]
-layout_mode = 2
-texture = ExtResource("4_vfncy")
-
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/RightPanelContainer/MessagesNode/VBoxContainer/MessagesDisplayPanel/ScrollContainer/VerticallScrollableContainer/VBoxContainer/PanelContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 15
-theme_override_constants/margin_top = 15
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 35
-
-[node name="Label" type="Label" parent="HBoxContainer/RightPanelContainer/MessagesNode/VBoxContainer/MessagesDisplayPanel/ScrollContainer/VerticallScrollableContainer/VBoxContainer/PanelContainer/MarginContainer"]
-z_index = 3
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-text = "Hi im Jameela jamil"
-
-[node name="MessagesSelectionPanel" type="Panel" parent="HBoxContainer/RightPanelContainer/MessagesNode/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxEmpty_amqq1")
-
-[node name="MessagesSelectionContainer" type="VBoxContainer" parent="HBoxContainer/RightPanelContainer/MessagesNode/VBoxContainer/MessagesSelectionPanel"]
-layout_mode = 0
-offset_left = 16.0
-offset_top = -16.00653
-offset_right = 501.0
-offset_bottom = 217.99347
-
-[node name="MessagesSubmitSolutionButton" type="TextureButton" parent="HBoxContainer/RightPanelContainer/MessagesNode/VBoxContainer/MessagesSelectionPanel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.74741507
-anchor_top = 0.6443241
-anchor_right = 0.9827046
-anchor_bottom = 0.9456067
-grow_horizontal = 0
-grow_vertical = 2
-stretch_mode = 0
-metadata/_edit_use_anchors_ = true
-
-[node name="MessageSubLabel" type="Label" parent="HBoxContainer/RightPanelContainer/MessagesNode/VBoxContainer/MessagesSelectionPanel/MessagesSubmitSolutionButton"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -57.5
-offset_top = -23.5
-offset_right = 57.5
-offset_bottom = 23.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("3_k3fr3")
-theme_override_font_sizes/font_size = 40
-text = "Submit"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="RealLifeNode" type="Control" parent="HBoxContainer/RightPanelContainer"]
-visible = false
-layout_mode = 2
-script = ExtResource("15_5my5b")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/RightPanelContainer/RealLifeNode"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -676.0
-offset_bottom = 718.11145
-grow_horizontal = 0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="RealLifeDisplayPanel" type="Panel" parent="HBoxContainer/RightPanelContainer/RealLifeNode/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 2.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_1q2bx")
-
-[node name="NoteBackgroundTR" type="TextureRect" parent="HBoxContainer/RightPanelContainer/RealLifeNode/VBoxContainer/RealLifeDisplayPanel"]
-z_as_relative = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("16_cbj1o")
-expand_mode = 5
-stretch_mode = 5
-
-[node name="RealLifeTextLabel" type="Label" parent="HBoxContainer/RightPanelContainer/RealLifeNode/VBoxContainer/RealLifeDisplayPanel"]
-layout_mode = 0
-offset_left = 70.0
-offset_top = 43.0
-offset_right = 507.0
-offset_bottom = 365.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_k3fr3")
-theme_override_font_sizes/font_size = 41
-theme_override_styles/normal = SubResource("StyleBoxEmpty_yi01h")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_cfo66")
-text = "Lorem ipsum Lorem ipsum dolor ahmet or wtevrrrrLorem ipsum Lorem ipsum dolor ahmet or wtevrrrrLorem ipsum Lorem ipsum dolor ahmet or wtevrrrr"
-autowrap_mode = 3
-
-[node name="RealLifeLelectionPanel" type="Panel" parent="HBoxContainer/RightPanelContainer/RealLifeNode/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxEmpty_amqq1")
-
-[node name="RealLifeSelectionContainer" type="VBoxContainer" parent="HBoxContainer/RightPanelContainer/RealLifeNode/VBoxContainer/RealLifeLelectionPanel"]
-layout_mode = 0
-offset_left = 16.0
-offset_top = -22.0
-offset_right = 499.0
-offset_bottom = 233.0
-
-[node name="RealLifeSubmitSolutionButton" type="TextureButton" parent="HBoxContainer/RightPanelContainer/RealLifeNode/VBoxContainer/RealLifeLelectionPanel"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = 167.0
-offset_top = -82.0
-offset_right = 326.4286
-offset_bottom = -10.0
-grow_horizontal = 2
-grow_vertical = 0
-stretch_mode = 0
-
-[node name="RealLifeSubLabel" type="Label" parent="HBoxContainer/RightPanelContainer/RealLifeNode/VBoxContainer/RealLifeLelectionPanel/RealLifeSubmitSolutionButton"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -57.5
-offset_top = -23.5
-offset_right = 57.5
-offset_bottom = 23.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("3_k3fr3")
-theme_override_font_sizes/font_size = 40
-text = "Submit"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="ManualPopupCanvasLayer" type="CanvasLayer" parent="."]
 layer = 3
@@ -703,31 +163,543 @@ text = "Email Manual"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="graded_solution" from="." to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/TextBubbleText" method="_on_gameplay_scene_1_graded_solution"]
-[connection signal="newCharacter" from="." to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/CustomerSprite" method="_on_gameplay_scene_1_new_character"]
+[node name="WaitingRoomPanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+size_flags_vertical = 3
+
+[node name="BackgroundTR" type="TextureRect" parent="WaitingRoomPanelContainer"]
+layout_mode = 2
+texture = ExtResource("4_yi01h")
+expand_mode = 1
+
+[node name="CustomerSprite" type="Sprite2D" parent="WaitingRoomPanelContainer"]
+position = Vector2(639.3749, 419.77496)
+scale = Vector2(4.416666, 4.416666)
+texture = ExtResource("6_amqq1")
+script = ExtResource("7_bnjt7")
+
+[node name="TextBubble" type="TextureRect" parent="WaitingRoomPanelContainer"]
+custom_minimum_size = Vector2(500, 350)
+layout_direction = 4
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+texture = ExtResource("4_vfncy")
+script = ExtResource("7_lovhm")
+
+[node name="TextBubbleText" type="Label" parent="WaitingRoomPanelContainer/TextBubble"]
+layout_mode = 1
+offset_left = 27.0
+offset_top = 27.0
+offset_right = 450.0
+offset_bottom = 173.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/paragraph_spacing = 0
+theme_override_fonts/font = ExtResource("3_k3fr3")
+theme_override_font_sizes/font_size = 31
+text = "Lorem ipsum Lorem ipsum Lorem ipsum"
+autowrap_mode = 2
+script = ExtResource("6_bnjt7")
+
+[node name="Checkout Button" type="TextureButton" parent="WaitingRoomPanelContainer/TextBubble"]
+layout_mode = 0
+offset_left = 324.99994
+offset_top = 187.0
+offset_right = 463.80005
+offset_bottom = 245.0
+texture_normal = ExtResource("8_q73r7")
+stretch_mode = 0
+script = ExtResource("10_yi01h")
+
+[node name="Label" type="Label" parent="WaitingRoomPanelContainer/TextBubble/Checkout Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.5
+offset_top = -10.5
+offset_right = 34.5
+offset_bottom = 10.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_k3fr3")
+theme_override_font_sizes/font_size = 26
+text = "Checkout"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bye Button" type="TextureButton" parent="WaitingRoomPanelContainer/TextBubble"]
+visible = false
+layout_mode = 0
+offset_left = 349.575
+offset_top = 189.0
+offset_right = 465.0
+offset_bottom = 246.0
+texture_normal = ExtResource("8_q73r7")
+stretch_mode = 0
+script = ExtResource("11_cfo66")
+
+[node name="Label" type="Label" parent="WaitingRoomPanelContainer/TextBubble/Bye Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.5
+offset_top = -10.5
+offset_right = 34.5
+offset_bottom = 10.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_k3fr3")
+theme_override_font_sizes/font_size = 26
+text = "Bye Bye"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RightPanelContainer" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.13
+theme_override_styles/panel = SubResource("StyleBoxEmpty_3ggs6")
+
+[node name="EmailNode" type="Control" parent="RightPanelContainer"]
+visible = false
+layout_mode = 2
+script = ExtResource("11_jyq0k")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="RightPanelContainer/EmailNode"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -338.5
+offset_top = -359.58688
+offset_right = 338.5
+offset_bottom = 359.58688
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="EmailDisplayPanel" type="Panel" parent="RightPanelContainer/EmailNode/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_1q2bx")
+
+[node name="EmailBackgroundTR" type="TextureRect" parent="RightPanelContainer/EmailNode/VBoxContainer/EmailDisplayPanel"]
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -7.0
+offset_top = -11.006531
+offset_right = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_8kcot")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="EmailFromLabel" type="Label" parent="RightPanelContainer/EmailNode/VBoxContainer/EmailDisplayPanel"]
+layout_mode = 0
+offset_left = 253.0
+offset_top = 103.99347
+offset_right = 650.0
+offset_bottom = 148.99347
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_k3fr3")
+theme_override_font_sizes/font_size = 23
+text = "From example"
+vertical_alignment = 1
+
+[node name="EmailSubjectLabel" type="Label" parent="RightPanelContainer/EmailNode/VBoxContainer/EmailDisplayPanel"]
+layout_mode = 0
+offset_left = 252.0
+offset_top = 166.99347
+offset_right = 650.0
+offset_bottom = 211.99347
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_k3fr3")
+theme_override_font_sizes/font_size = 23
+text = "Subject example"
+vertical_alignment = 1
+
+[node name="EmailBodyLabel" type="Label" parent="RightPanelContainer/EmailNode/VBoxContainer/EmailDisplayPanel"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 236.99347
+offset_right = 654.0
+offset_bottom = 434.99347
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_k3fr3")
+theme_override_font_sizes/font_size = 26
+text = "Subject example"
+autowrap_mode = 3
+
+[node name="EmailSelectionPanel" type="Panel" parent="RightPanelContainer/EmailNode/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_amqq1")
+
+[node name="EmailSelectionContainer" type="VBoxContainer" parent="RightPanelContainer/EmailNode/VBoxContainer/EmailSelectionPanel"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = -25.00653
+offset_right = 496.0
+offset_bottom = 227.99347
+
+[node name="EmailSubmitSolutionButton" type="TextureButton" parent="RightPanelContainer/EmailNode/VBoxContainer/EmailSelectionPanel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 167.5
+offset_top = -85.00653
+offset_right = 326.5
+offset_bottom = -13.006531
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("15_lovhm")
+stretch_mode = 0
+
+[node name="EmailSubLabel" type="Label" parent="RightPanelContainer/EmailNode/VBoxContainer/EmailSelectionPanel/EmailSubmitSolutionButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -57.5
+offset_top = -23.5
+offset_right = 57.5
+offset_bottom = 23.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_k3fr3")
+theme_override_font_sizes/font_size = 40
+text = "Submit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MessagesNode" type="Control" parent="RightPanelContainer"]
+visible = false
+layout_mode = 2
+script = ExtResource("13_1sg7f")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="RightPanelContainer/MessagesNode"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -338.5
+offset_top = -359.58688
+offset_right = 338.5
+offset_bottom = 359.58688
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MessagesDisplayPanel" type="Panel" parent="RightPanelContainer/MessagesNode/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_1q2bx")
+
+[node name="MessagesBackgroundTR" type="TextureRect" parent="RightPanelContainer/MessagesNode/VBoxContainer/MessagesDisplayPanel"]
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_ujqrd")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="ScrollContainer" type="ScrollContainer" parent="RightPanelContainer/MessagesNode/VBoxContainer/MessagesDisplayPanel"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 137.99347
+offset_right = 663.98376
+offset_bottom = 391.98694
+
+[node name="VerticallScrollableContainer" type="VScrollBar" parent="RightPanelContainer/MessagesNode/VBoxContainer/MessagesDisplayPanel/ScrollContainer"]
+layout_mode = 2
+theme_override_styles/scroll = SubResource("StyleBoxEmpty_5my5b")
+theme_override_styles/scroll_focus = SubResource("StyleBoxEmpty_cbj1o")
+theme_override_styles/grabber = SubResource("StyleBoxEmpty_k3fr3")
+theme_override_styles/grabber_highlight = SubResource("StyleBoxEmpty_q73r7")
+theme_override_styles/grabber_pressed = SubResource("StyleBoxEmpty_lovhm")
+max_value = 1000.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="RightPanelContainer/MessagesNode/VBoxContainer/MessagesDisplayPanel/ScrollContainer/VerticallScrollableContainer"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="RightPanelContainer/MessagesNode/VBoxContainer/MessagesDisplayPanel/ScrollContainer/VerticallScrollableContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_1sg7f")
+
+[node name="TextBubble" type="TextureRect" parent="RightPanelContainer/MessagesNode/VBoxContainer/MessagesDisplayPanel/ScrollContainer/VerticallScrollableContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+texture = ExtResource("4_vfncy")
+
+[node name="MarginContainer" type="MarginContainer" parent="RightPanelContainer/MessagesNode/VBoxContainer/MessagesDisplayPanel/ScrollContainer/VerticallScrollableContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 35
+
+[node name="Label" type="Label" parent="RightPanelContainer/MessagesNode/VBoxContainer/MessagesDisplayPanel/ScrollContainer/VerticallScrollableContainer/VBoxContainer/PanelContainer/MarginContainer"]
+z_index = 3
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Hi im Jameela jamil"
+
+[node name="MessagesSelectionPanel" type="Panel" parent="RightPanelContainer/MessagesNode/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_amqq1")
+
+[node name="MessagesSelectionContainer" type="VBoxContainer" parent="RightPanelContainer/MessagesNode/VBoxContainer/MessagesSelectionPanel"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = -16.00653
+offset_right = 501.0
+offset_bottom = 217.99347
+
+[node name="MessagesSubmitSolutionButton" type="TextureButton" parent="RightPanelContainer/MessagesNode/VBoxContainer/MessagesSelectionPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.74741507
+anchor_top = 0.6443241
+anchor_right = 0.9827046
+anchor_bottom = 0.9456067
+grow_horizontal = 0
+grow_vertical = 2
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="MessageSubLabel" type="Label" parent="RightPanelContainer/MessagesNode/VBoxContainer/MessagesSelectionPanel/MessagesSubmitSolutionButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -57.5
+offset_top = -23.5
+offset_right = 57.5
+offset_bottom = 23.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_k3fr3")
+theme_override_font_sizes/font_size = 40
+text = "Submit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RealLifeNode" type="Control" parent="RightPanelContainer"]
+visible = false
+layout_mode = 2
+script = ExtResource("15_5my5b")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="RightPanelContainer/RealLifeNode"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -338.0
+offset_top = -359.05573
+offset_right = 338.0
+offset_bottom = 359.05573
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RealLifeDisplayPanel" type="Panel" parent="RightPanelContainer/RealLifeNode/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_1q2bx")
+
+[node name="NoteBackgroundTR" type="TextureRect" parent="RightPanelContainer/RealLifeNode/VBoxContainer/RealLifeDisplayPanel"]
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("16_cbj1o")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="RealLifeTextLabel" type="Label" parent="RightPanelContainer/RealLifeNode/VBoxContainer/RealLifeDisplayPanel"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 43.0
+offset_right = 507.0
+offset_bottom = 365.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_k3fr3")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yi01h")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cfo66")
+text = "Lorem ipsum Lorem ipsum dolor ahmet or wtevrrrrLorem ipsum Lorem ipsum dolor ahmet or wtevrrrrLorem ipsum Lorem ipsum dolor ahmet or wtevrrrr"
+autowrap_mode = 3
+
+[node name="RealLifeLelectionPanel" type="Panel" parent="RightPanelContainer/RealLifeNode/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_amqq1")
+
+[node name="RealLifeSelectionContainer" type="VBoxContainer" parent="RightPanelContainer/RealLifeNode/VBoxContainer/RealLifeLelectionPanel"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = -22.0
+offset_right = 499.0
+offset_bottom = 233.0
+
+[node name="RealLifeSubmitSolutionButton" type="TextureButton" parent="RightPanelContainer/RealLifeNode/VBoxContainer/RealLifeLelectionPanel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 167.0
+offset_top = -82.0
+offset_right = 326.4286
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+stretch_mode = 0
+
+[node name="RealLifeSubLabel" type="Label" parent="RightPanelContainer/RealLifeNode/VBoxContainer/RealLifeLelectionPanel/RealLifeSubmitSolutionButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -57.5
+offset_top = -23.5
+offset_right = 57.5
+offset_bottom = 23.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_k3fr3")
+theme_override_font_sizes/font_size = 40
+text = "Submit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Accessories" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 32.0
+offset_right = 196.0
+offset_bottom = 116.0
+theme_override_constants/separation = 15
+script = ExtResource("20_ypkrs")
+
+[node name="0" type="TextureRect" parent="Accessories"]
+layout_mode = 2
+texture = ExtResource("21_3ggs6")
+
+[node name="1" type="TextureRect" parent="Accessories"]
+layout_mode = 2
+texture = ExtResource("22_e7oxk")
+
+[node name="2" type="TextureRect" parent="Accessories"]
+layout_mode = 2
+texture = ExtResource("23_uvkju")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+offset_left = 3.0
+offset_top = 420.0
+offset_right = 174.0
+offset_bottom = 724.0
+theme_override_constants/separation = 15
+
+[node name="Open Shop Button" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("21_wjgy3")
+stretch_mode = 4
+
+[node name="Open Problem Button" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("23_3ggs6")
+
+[node name="Open Manual Button" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("25_uvkju")
+
+[node name="Money" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_k3fr3")
+theme_override_font_sizes/font_size = 27
+text = "Money Spot"
+script = ExtResource("14_8cuma")
+
+[connection signal="graded_solution" from="." to="WaitingRoomPanelContainer/TextBubble/TextBubbleText" method="_on_gameplay_scene_1_graded_solution"]
+[connection signal="newCharacter" from="." to="WaitingRoomPanelContainer/CustomerSprite" method="_on_gameplay_scene_1_new_character"]
 [connection signal="newProblem" from="." to="." method="_on_new_problem"]
-[connection signal="newProblem" from="." to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/TextBubbleText" method="_on_gameplay_scene_1_new_problem"]
-[connection signal="newProblem" from="." to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/Checkout Button" method="_on_gameplay_scene_1_new_problem"]
-[connection signal="newProblem" from="." to="HBoxContainer/RightPanelContainer/EmailNode" method="_on_gameplay_scene_1_new_problem"]
-[connection signal="newProblem" from="." to="HBoxContainer/RightPanelContainer/MessagesNode" method="_on_gameplay_scene_1_new_problem"]
-[connection signal="newProblem" from="." to="HBoxContainer/RightPanelContainer/RealLifeNode" method="_on_gameplay_scene_1_new_problem"]
-[connection signal="pressed" from="HBoxContainer/LeftPanelContainer/VBoxContainer/MenuPanel/EmailsMenuButton" to="." method="_on_emails_menu_button_pressed"]
-[connection signal="pressed" from="HBoxContainer/LeftPanelContainer/VBoxContainer/MenuPanel/MessagesMenuButton" to="." method="_on_messages_menu_button_pressed"]
-[connection signal="pressed" from="HBoxContainer/LeftPanelContainer/VBoxContainer/MenuPanel/RealLifeMenuButton" to="." method="_on_real_life_menu_button_pressed"]
-[connection signal="finished_thank_you_message" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/TextBubbleText" to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/Bye Button" method="_on_text_bubble_text_finished_thank_you_message"]
-[connection signal="showProblem" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/Checkout Button" to="HBoxContainer/RightPanelContainer/EmailNode" method="_on_texture_button_show_problem"]
-[connection signal="showProblem" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/Checkout Button" to="HBoxContainer/RightPanelContainer/MessagesNode" method="_on_texture_button_show_problem"]
-[connection signal="showProblem" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/Checkout Button" to="HBoxContainer/RightPanelContainer/RealLifeNode" method="_on_texture_button_show_problem"]
-[connection signal="visibility_changed" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/Checkout Button" to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/TextBubbleText" method="_on_texture_button_visibility_changed"]
-[connection signal="pressed" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/Bye Button" to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble" method="_on_bye_button_pressed"]
-[connection signal="pressed" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/Bye Button" to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/CustomerSprite" method="_on_bye_button_pressed"]
-[connection signal="character_exited" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/CustomerSprite" to="." method="_on_customer_sprite_character_exited"]
-[connection signal="character_stopped" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/CustomerSprite" to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble" method="_on_customer_sprite_character_stopped"]
-[connection signal="character_stopped" from="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/CustomerSprite" to="HBoxContainer/LeftPanelContainer/VBoxContainer/WaitingRoomPanelContainer/TextBubble/TextBubbleText" method="_on_customer_sprite_character_stopped"]
-[connection signal="submitSelection" from="HBoxContainer/RightPanelContainer/EmailNode" to="." method="_on_email_node_submit_selection"]
-[connection signal="pressed" from="HBoxContainer/RightPanelContainer/EmailNode/VBoxContainer/EmailSelectionPanel/EmailSubmitSolutionButton" to="HBoxContainer/RightPanelContainer/EmailNode" method="_on_email_submit_solution_button_pressed"]
-[connection signal="submitSelection" from="HBoxContainer/RightPanelContainer/MessagesNode" to="." method="_on_messages_node_submit_selection"]
-[connection signal="pressed" from="HBoxContainer/RightPanelContainer/MessagesNode/VBoxContainer/MessagesSelectionPanel/MessagesSubmitSolutionButton" to="HBoxContainer/RightPanelContainer/MessagesNode" method="_on_messages_submit_solution_button_pressed"]
-[connection signal="submitSelection" from="HBoxContainer/RightPanelContainer/RealLifeNode" to="." method="_on_real_life_node_submit_selection"]
-[connection signal="pressed" from="HBoxContainer/RightPanelContainer/RealLifeNode/VBoxContainer/RealLifeLelectionPanel/RealLifeSubmitSolutionButton" to="HBoxContainer/RightPanelContainer/RealLifeNode" method="_on_real_life_submit_solution_button_pressed"]
+[connection signal="newProblem" from="." to="WaitingRoomPanelContainer/TextBubble/TextBubbleText" method="_on_gameplay_scene_1_new_problem"]
+[connection signal="newProblem" from="." to="WaitingRoomPanelContainer/TextBubble/Checkout Button" method="_on_gameplay_scene_1_new_problem"]
+[connection signal="newProblem" from="." to="RightPanelContainer/EmailNode" method="_on_gameplay_scene_1_new_problem"]
+[connection signal="newProblem" from="." to="RightPanelContainer/MessagesNode" method="_on_gameplay_scene_1_new_problem"]
+[connection signal="newProblem" from="." to="RightPanelContainer/RealLifeNode" method="_on_gameplay_scene_1_new_problem"]
 [connection signal="button_down" from="ManualPopupCanvasLayer/BackgroundButton" to="." method="_on_background_button_button_down"]
+[connection signal="character_exited" from="WaitingRoomPanelContainer/CustomerSprite" to="." method="_on_customer_sprite_character_exited"]
+[connection signal="character_stopped" from="WaitingRoomPanelContainer/CustomerSprite" to="WaitingRoomPanelContainer/TextBubble" method="_on_customer_sprite_character_stopped"]
+[connection signal="character_stopped" from="WaitingRoomPanelContainer/CustomerSprite" to="WaitingRoomPanelContainer/TextBubble/TextBubbleText" method="_on_customer_sprite_character_stopped"]
+[connection signal="finished_thank_you_message" from="WaitingRoomPanelContainer/TextBubble/TextBubbleText" to="WaitingRoomPanelContainer/TextBubble/Bye Button" method="_on_text_bubble_text_finished_thank_you_message"]
+[connection signal="showProblem" from="WaitingRoomPanelContainer/TextBubble/Checkout Button" to="RightPanelContainer/EmailNode" method="_on_checkout_button_show_problem"]
+[connection signal="showProblem" from="WaitingRoomPanelContainer/TextBubble/Checkout Button" to="RightPanelContainer/MessagesNode" method="_on_checkout_button_show_problem"]
+[connection signal="showProblem" from="WaitingRoomPanelContainer/TextBubble/Checkout Button" to="RightPanelContainer/RealLifeNode" method="_on_checkout_button_show_problem"]
+[connection signal="visibility_changed" from="WaitingRoomPanelContainer/TextBubble/Checkout Button" to="WaitingRoomPanelContainer/TextBubble/TextBubbleText" method="_on_texture_button_visibility_changed"]
+[connection signal="pressed" from="WaitingRoomPanelContainer/TextBubble/Bye Button" to="WaitingRoomPanelContainer/TextBubble" method="_on_bye_button_pressed"]
+[connection signal="pressed" from="WaitingRoomPanelContainer/TextBubble/Bye Button" to="WaitingRoomPanelContainer/CustomerSprite" method="_on_bye_button_pressed"]
+[connection signal="submitSelection" from="RightPanelContainer/EmailNode" to="." method="_on_email_node_submit_selection"]
+[connection signal="pressed" from="RightPanelContainer/EmailNode/VBoxContainer/EmailSelectionPanel/EmailSubmitSolutionButton" to="RightPanelContainer/EmailNode" method="_on_email_submit_solution_button_pressed"]
+[connection signal="submitSelection" from="RightPanelContainer/MessagesNode" to="." method="_on_messages_node_submit_selection"]
+[connection signal="pressed" from="RightPanelContainer/MessagesNode/VBoxContainer/MessagesSelectionPanel/MessagesSubmitSolutionButton" to="RightPanelContainer/MessagesNode" method="_on_messages_submit_solution_button_pressed"]
+[connection signal="submitSelection" from="RightPanelContainer/RealLifeNode" to="." method="_on_real_life_node_submit_selection"]
+[connection signal="pressed" from="RightPanelContainer/RealLifeNode/VBoxContainer/RealLifeLelectionPanel/RealLifeSubmitSolutionButton" to="RightPanelContainer/RealLifeNode" method="_on_real_life_submit_solution_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Open Shop Button" to="." method="_on_open_shop_button_pressed"]

@@ -3,6 +3,8 @@ extends Node
 const SAVE_PATH := "user://shop_save.json"
 var money: int = 100
 
+signal equipment_changed
+
 var owned_items: Array[String] = []
 var equipped_items: Array[String] = []
 
@@ -33,11 +35,13 @@ func equip_item(id: String):
 	if id in owned_items and not id in equipped_items:
 		equipped_items.append(id)
 		save_game()
+		equipment_changed.emit()
 
 
 func unequip_item(id: String):
 	equipped_items.erase(id)
 	save_game()
+	equipment_changed.emit()
 
 
 # =========================

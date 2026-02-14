@@ -65,7 +65,7 @@ func _on_messages_submit_solution_button_pressed() -> void:
 	visible = false
 	submitSelection.emit(selections)
 
-
-func _on_texture_button_show_problem() -> void:
+func _on_checkout_button_show_problem() -> void:
 	if currProblem is MessagesProblem:
 		visible = true
+		print("Problem")

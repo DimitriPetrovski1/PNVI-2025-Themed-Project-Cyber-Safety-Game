@@ -1,11 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjav3hhcrpc3s"]
+[gd_scene load_steps=5 format=3 uid="uid://cjav3hhcrpc3s"]
 
 [ext_resource type="Script" uid="uid://cbf5v4y280uim" path="res://scenes/shop/shop.gd" id="1_3qebd"]
 [ext_resource type="Texture2D" uid="uid://0olwe0cjd7s0" path="res://assets/UI/shop_popup_panel.png" id="1_rktij"]
+[ext_resource type="FontFile" uid="uid://corb1yiw63hdc" path="res://assets/Fonts/PixelOperatorHB.ttf" id="3_srfm6"]
+[ext_resource type="Script" uid="uid://8s32fcrtxxxf" path="res://scenes/label.gd" id="4_xjfbs"]
 
 [node name="Shop" type="Control"]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_3qebd")
 
 [node name="Background Back Button" type="Button" parent="."]
@@ -29,18 +35,56 @@ grow_vertical = 2
 texture = ExtResource("1_rktij")
 stretch_mode = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Background Back Button/TextureRect"]
+[node name="ScrollContainer" type="ScrollContainer" parent="Background Back Button/TextureRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -400.0
-offset_top = -216.0
-offset_right = 400.0
-offset_bottom = 312.0
+offset_left = -395.0
+offset_top = -162.0
+offset_right = 392.0
+offset_bottom = 305.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="Background Back Button/TextureRect/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 30
+theme_override_constants/v_separation = 10
+columns = 3
+
+[node name="Money" type="Label" parent="Background Back Button/TextureRect"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 118.0
+offset_right = 570.0
+offset_bottom = 164.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0.72156864, 0, 1)
+theme_override_fonts/font = ExtResource("3_srfm6")
+theme_override_font_sizes/font_size = 45
+text = "Money Spot"
+script = ExtResource("4_xjfbs")
+
+[node name="Shop Label" type="Label" parent="Background Back Button/TextureRect"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -281.0
+offset_top = 18.0
+offset_right = -26.0
+offset_bottom = 91.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("3_srfm6")
+theme_override_font_sizes/font_size = 70
+text = "SHOP"
+horizontal_alignment = 2
+vertical_alignment = 1
 
 [connection signal="pressed" from="Background Back Button" to="." method="_on_color_rect_pressed"]

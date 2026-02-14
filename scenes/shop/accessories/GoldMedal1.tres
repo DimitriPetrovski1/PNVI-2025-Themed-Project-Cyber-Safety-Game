@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_jy5d6")
-id = "0"
+id = "2"
 name = "Gold Trophy 1"
 price = 100
 texture = ExtResource("2_vyau8")

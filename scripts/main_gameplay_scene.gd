@@ -1,6 +1,7 @@
 extends Control
 
 var gamestate:String=""
+
 var CharacterDB:Array[Texture2D]
 var ProblemDB:Array[Problem]
 signal newProblem(problem:Problem)
@@ -8,8 +9,11 @@ signal newCharacter(characterTexture:Texture2D)
 signal graded_solution
 var currentCharacter:Texture2D = null
 var currentProblem:Problem = null
-@onready var score:int = 0 
 
+var shop_scene = preload("res://scenes/shop/Shop.tscn")
+
+@onready var score:int = 0 
+@onready var accessory_container = $Accessories # The parent node of all your sprites
 
 #----------------- Initialising databases -----------------
 func initCharacterDB():
@@ -86,10 +90,20 @@ func pickProblem():
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	#update_accessory_visibility()
 	initCharacterDB()
 	initProblemDB()
 	pickCharacter()
 	pickProblem()
+
+#func update_accessory_visibility():
+	## Loop through every sprite inside the Accessories container
+	#for sprite in accessory_container.get_children():
+		## Check if the node's name is in the equipped_items array
+		#if sprite.name in ShopGameData.equipped_items:
+			#sprite.show() # or sprite.visible = true
+		#else:
+			#sprite.hide() # or sprite.visible = false
 
 
 #---------------Grading Selections and advancing to next case-------------------
@@ -195,8 +209,18 @@ func _on_messages_menu_button_pressed() -> void:
 func _on_real_life_menu_button_pressed() -> void:
 	show_menu("Real Life menu")
 
-
-
 func _on_background_button_button_down() -> void:
 	var canvas = $ManualPopupCanvasLayer
 	canvas.visible = false
+
+
+
+func _on_open_shop_button_pressed() -> void:
+	# Check if shop is already open
+	if has_node("ShopInstance"):
+		return
+	# Instantiate and name it
+	var shop = shop_scene.instantiate()
+	shop.name = "ShopInstance"
+	# Adding it here (to the root) makes it start at the top-left of the screen
+	add_child(shop)
