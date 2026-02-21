@@ -10,11 +10,15 @@ signal graded_solution
 signal score_into_money
 var currentCharacter:Texture2D = null
 var currentProblem:Problem = null
+var number_problems_solved := 0
+const problems_per_day := 2
+var day_scene_path = "res://scenes/Day.tscn"
 
 var shop_scene = preload("res://scenes/shop/Shop.tscn")
 
 @onready var score:int = 0 
 @onready var accessory_container = $Accessories # The parent node of all your sprites
+
 
 #----------------- Initialising databases -----------------
 func initCharacterDB():
@@ -77,7 +81,7 @@ func pickCharacter():
 	newCharacter.emit(currentCharacter)
 
 
-func pickProblem():
+func pickProblem() -> void:
 	var newProb
 	if not currentProblem:
 		newProb = ProblemDB.pick_random()
@@ -94,9 +98,10 @@ func _ready() -> void:
 	#update_accessory_visibility()
 	initCharacterDB()
 	initProblemDB()
-#	Transition.transition_to("res://scenes/main_menu.tscn")
 	pickCharacter()
 	pickProblem()
+#	reparent(get_tree().root)
+
 
 #func update_accessory_visibility():
 	## Loop through every sprite inside the Accessories container
@@ -112,6 +117,7 @@ func _ready() -> void:
 
 
 func gradeSolution(solutions:Array[String])->void:
+	number_problems_solved +=1
 	var correctChoices = currentProblem.get_correct_choices()
 	var newScoreDelta=0
 	for solution in solutions:
@@ -131,6 +137,7 @@ func gradeSolution(solutions:Array[String])->void:
 	if newScoreDelta > 0:
 		ShopGameData.add_money(newScoreDelta*10)
 	print("new Score:",score)
+	
 
 	
 func _on_customer_sprite_character_exited() -> void:
@@ -220,3 +227,10 @@ func _on_open_shop_button_pressed() -> void:
 	# Adding it here (to the root) makes it start at the top-left of the screen
 	add_child(shop)
 	
+
+
+func _on_bye_button_pressed() -> void:
+	if number_problems_solved == problems_per_day:
+		number_problems_solved = 0
+		Transition.transition_to(day_scene_path)
+		return

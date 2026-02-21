@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 ShopGameData="*res://scripts/shop/ShopGameData.gd"
 Transition="*res://scenes/SceneTransition.tscn"
+GameInfo="*res://scripts/game_info.gd"
 
 [display]
 
