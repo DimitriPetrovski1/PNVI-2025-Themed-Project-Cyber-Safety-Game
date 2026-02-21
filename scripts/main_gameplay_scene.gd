@@ -94,6 +94,7 @@ func _ready() -> void:
 	#update_accessory_visibility()
 	initCharacterDB()
 	initProblemDB()
+#	Transition.transition_to("res://scenes/main_menu.tscn")
 	pickCharacter()
 	pickProblem()
 
@@ -218,3 +219,4 @@ func _on_open_shop_button_pressed() -> void:
 	shop.name = "ShopInstance"
 	# Adding it here (to the root) makes it start at the top-left of the screen
 	add_child(shop)
+	
